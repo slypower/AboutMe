@@ -14,11 +14,6 @@ class ViewController: UIViewController {
     
     let userName = "admin"
     let password = "admin"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -39,6 +34,10 @@ class ViewController: UIViewController {
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+    }
+
     @IBAction func forgotUserNameButton() {
         showAlert(title: "Ooops!", message: "Your name is \(userName) :)")
     }
@@ -46,6 +45,13 @@ class ViewController: UIViewController {
     @IBAction func forgotPasswordButton() {
         showAlert(title: "Ooops!", message: "Your password is \(password)")
     }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+//        guard let welcomeVC = segue.source as? WelcomeViewController else {return}
+        userNameTextField.text = ""
+        PasswordTextField.text = ""
+    }
+    
 }
 
 // MARK: - Private Metod
