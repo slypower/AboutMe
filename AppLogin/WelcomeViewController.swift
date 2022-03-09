@@ -21,6 +21,9 @@ class WelcomeViewController: UIViewController {
         
     }
  
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+    }
 
     @IBAction func logOutButton() {
         dismiss(animated: true)
