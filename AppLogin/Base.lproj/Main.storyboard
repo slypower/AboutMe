@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="nN5-wV-kWD">
-                                <rect key="frame" x="60" y="348" width="294" height="161"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="nN5-wV-kWD">
+                                <rect key="frame" x="60" y="367" width="294" height="161"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KHE-VG-sjK">
                                         <rect key="frame" x="0.0" y="0.0" width="294" height="34"/>
@@ -44,7 +44,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="73k-n6-31h">
-                                <rect key="frame" x="60" y="517" width="294" height="30"/>
+                                <rect key="frame" x="60" y="536" width="294" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbT-xZ-40j">
                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="30"/>
@@ -68,12 +68,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
-                            <constraint firstItem="73k-n6-31h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="Iob-dx-fuj"/>
-                            <constraint firstItem="nN5-wV-kWD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="Vxp-JZ-r9D"/>
-                            <constraint firstItem="nN5-wV-kWD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="304" id="Y5X-0q-CuD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="73k-n6-31h" secondAttribute="trailing" constant="60" id="eIM-Gy-Wsj"/>
-                            <constraint firstItem="73k-n6-31h" firstAttribute="top" secondItem="nN5-wV-kWD" secondAttribute="bottom" constant="8" id="iaQ-4K-N8t"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nN5-wV-kWD" secondAttribute="trailing" constant="60" id="iyN-V6-mtW"/>
+                            <constraint firstItem="73k-n6-31h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="Igq-A8-JR3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="73k-n6-31h" secondAttribute="trailing" constant="60" id="Jwd-ln-Zvs"/>
+                            <constraint firstItem="73k-n6-31h" firstAttribute="top" secondItem="nN5-wV-kWD" secondAttribute="bottom" constant="8" symbolic="YES" id="Qeo-71-7eK"/>
+                            <constraint firstItem="nN5-wV-kWD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="VVu-rf-bwi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nN5-wV-kWD" secondAttribute="trailing" constant="60" id="pPl-5B-wub"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="73k-n6-31h" secondAttribute="bottom" constant="296" id="zSf-EL-U6R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SMG-AC-Y6I"/>
