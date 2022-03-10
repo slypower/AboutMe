@@ -10,32 +10,36 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var userNameTextField: UITextField!
-    @IBOutlet var PasswordTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
     
-    let userName = "admin"
-    let password = "admin"
+    private let userName = "admin"
+    private let password = "admin"
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if userNameTextField.text != String(userName)
-            || PasswordTextField.text != String(password) {
-            
-            showAlert(title: "Invalid login or password",
-                      message: "Please, enter correct login and password")
-            
-            PasswordTextField.text = ""
-            
-        } else {
-        
-            guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
-            welcomeVC.user = userName
-            
-        }
+        guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
+        welcomeVC.user = userName
         
     }
     
+    @IBAction func pressLogInButton() {
+        
+        guard  userNameTextField.text == userName,
+               passwordTextField.text == password
+        else {
+            showAlert(title: "Invalid login or password",
+                      message: "Please, enter correct login and password",
+                      textField: passwordTextField)
+            
+            return
+            
+        }
+    }
+    
+//    keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 
     @IBAction func forgotUserNameButton() {
@@ -47,19 +51,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-//        guard let welcomeVC = segue.source as? WelcomeViewController else {return}
         userNameTextField.text = ""
-        PasswordTextField.text = ""
+        passwordTextField.text = ""
     }
     
 }
 
-// MARK: - Private Metod
+// MARK: - Alert Controller
 extension ViewController {
-    fileprivate func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
 }
+
+// MARK: keyboard

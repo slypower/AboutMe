@@ -38,6 +38,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
+                                            <action selector="pressLogInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7e-Hz-Pd6"/>
                                             <segue destination="pOB-ar-Dh3" kind="presentation" modalPresentationStyle="overFullScreen" id="0cc-c9-tZe"/>
                                         </connections>
                                     </button>
@@ -78,7 +79,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SMG-AC-Y6I"/>
                     <connections>
-                        <outlet property="PasswordTextField" destination="8Ls-kS-9yC" id="Gvf-aD-qyM"/>
+                        <outlet property="passwordTextField" destination="8Ls-kS-9yC" id="Gvf-aD-qyM"/>
                         <outlet property="userNameTextField" destination="KHE-VG-sjK" id="LbD-jV-YfD"/>
                     </connections>
                 </viewController>
@@ -104,8 +105,11 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdE-By-Zrr">
-                                <rect key="frame" x="60" y="230" width="294" height="37"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <rect key="frame" x="60" y="230" width="294" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="294" id="rtf-eI-51I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
