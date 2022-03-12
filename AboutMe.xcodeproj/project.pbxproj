@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B98644827D90B5500F9F1E1 /* AppLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B98644827D90B5500F9F1E1 /* AboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B98644B27D90B5500F9F1E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B98644D27D90B5500F9F1E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5B98644F27D90B5500F9F1E1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		5B98644927D90B5500F9F1E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B98644827D90B5500F9F1E1 /* AppLogin.app */,
+				5B98644827D90B5500F9F1E1 /* AboutMe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B98644727D90B5500F9F1E1 /* AppLogin */ = {
+		5B98644727D90B5500F9F1E1 /* AboutMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B98645C27D90B5600F9F1E1 /* Build configuration list for PBXNativeTarget "AppLogin" */;
+			buildConfigurationList = 5B98645C27D90B5600F9F1E1 /* Build configuration list for PBXNativeTarget "AboutMe" */;
 			buildPhases = (
 				5B98644427D90B5500F9F1E1 /* Sources */,
 				5B98644527D90B5500F9F1E1 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = AppLogin;
+			name = AboutMe;
 			productName = AppLogin;
-			productReference = 5B98644827D90B5500F9F1E1 /* AppLogin.app */;
+			productReference = 5B98644827D90B5500F9F1E1 /* AboutMe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5B98644327D90B5500F9F1E1 /* Build configuration list for PBXProject "AppLogin" */;
+			buildConfigurationList = 5B98644327D90B5500F9F1E1 /* Build configuration list for PBXProject "AboutMe" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B98644727D90B5500F9F1E1 /* AppLogin */,
+				5B98644727D90B5500F9F1E1 /* AboutMe */,
 			);
 		};
 /* End PBXProject section */
@@ -349,7 +349,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B98644327D90B5500F9F1E1 /* Build configuration list for PBXProject "AppLogin" */ = {
+		5B98644327D90B5500F9F1E1 /* Build configuration list for PBXProject "AboutMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B98645A27D90B5600F9F1E1 /* Debug */,
@@ -358,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B98645C27D90B5600F9F1E1 /* Build configuration list for PBXNativeTarget "AppLogin" */ = {
+		5B98645C27D90B5600F9F1E1 /* Build configuration list for PBXNativeTarget "AboutMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B98645D27D90B5600F9F1E1 /* Debug */,
