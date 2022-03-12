@@ -26,8 +26,14 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
-        welcomeVC.user = userName
+        let tabBarController = segue.destination as? UITabBarController
+        guard let viewControllers = tabBarController?.viewControllers else {return}
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = userName
+            }
+        }
+
     }
     
     @IBAction func pressLogInButton() {

@@ -188,10 +188,10 @@
             </objects>
             <point key="canvasLocation" x="4254" y="855"/>
         </scene>
-        <!--View Controller-->
+        <!--More info-->
         <scene sceneID="EAg-zJ-ZVS">
             <objects>
-                <viewController id="Inx-kd-lBC" sceneMemberID="viewController">
+                <viewController title="More info" id="Inx-kd-lBC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p9z-Et-nI6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
