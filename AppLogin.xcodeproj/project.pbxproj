@@ -296,6 +296,7 @@
 				DEVELOPMENT_TEAM = U2CVC8W4ZQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppLogin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AboutMe;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -307,7 +308,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = by.BobrikVS.AppLogin;
+				PRODUCT_BUNDLE_IDENTIFIER = by.BobrikVS.AboutMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -325,6 +326,7 @@
 				DEVELOPMENT_TEAM = U2CVC8W4ZQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppLogin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AboutMe;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -336,7 +338,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = by.BobrikVS.AppLogin;
+				PRODUCT_BUNDLE_IDENTIFIER = by.BobrikVS.AboutMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
