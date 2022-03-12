@@ -18,6 +18,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameTextField.delegate = self
+
+        //        delete after test
+        userNameTextField.text = userName
+        passwordTextField.text = password
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
