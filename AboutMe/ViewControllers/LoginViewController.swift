@@ -12,9 +12,11 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    private let userName = "admin"
-    private let password = "admin"
+    private let users = UserLogin.getUsers()
 
+    private let userName: String = UserLogin.login
+    private let password: String = UserLogin.password
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameTextField.delegate = self
@@ -26,26 +28,47 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let person: String = users.name + " " + users.surname
+     
+        
         let tabBarController = segue.destination as? UITabBarController
         guard let viewControllers = tabBarController?.viewControllers else {return}
         for viewController in viewControllers {
+            
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.user = userName
+                welcomeVC.user = person
+            
+            } else if let navigationVC = viewController as? UINavigationController {
+                let aboutUserVC = navigationVC.topViewController as! UserViewController
+                
+                aboutUserVC.title = person
+                
+                aboutUserVC.name = users.name
+                aboutUserVC.surname = users.surname
+                aboutUserVC.age = users.age
+                aboutUserVC.work = users.work
+                aboutUserVC.sity = users.sity
+                aboutUserVC.interests = users.interests
+
             }
+            
         }
 
     }
     
     @IBAction func pressLogInButton() {
+ 
         guard userNameTextField.text == userName, passwordTextField.text == password else {
-            showAlert(
-                title: "Invalid login or password",
-                message: "Please, enter correct login and password",
-                textField: passwordTextField
-            )
-            return
-        }
-        performSegue(withIdentifier: "openWelcomeVC", sender: nil)
+                showAlert(
+                    title: "Invalid login or password",
+                    message: "Please, enter correct login and password",
+                    textField: passwordTextField
+                )
+                return
+            }
+
+            performSegue(withIdentifier: "openWelcomeVC", sender: nil)
+            
     }
 
     @IBAction func forgotUserPassword(_ sender: UIButton) {
