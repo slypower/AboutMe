@@ -12,40 +12,25 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    private let users = UserLogin.getUsers()
-
-    private let userName: String = UserLogin.login
-    private let password: String = UserLogin.password
+    private let user = User.getUserData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameTextField.delegate = self
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let person: String = users.name + " " + users.surname
-     
         
-        let tabBarController = segue.destination as? UITabBarController
-        guard let viewControllers = tabBarController?.viewControllers else {return}
+        guard let tabBarController = segue.destination as? UITabBarController else {return}
+        guard let viewControllers = tabBarController.viewControllers else {return}
+       
         for viewController in viewControllers {
             
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.user = person
-            
+                welcomeVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
-                let aboutUserVC = navigationVC.topViewController as! UserViewController
-                
-                aboutUserVC.title = person
-                
-                aboutUserVC.name = users.name
-                aboutUserVC.surname = users.surname
-                aboutUserVC.age = users.age
-                aboutUserVC.work = users.work
-                aboutUserVC.sity = users.sity
-                aboutUserVC.interests = users.interests
-
+                guard let aboutUserVC = navigationVC.topViewController as? UserViewController else {return}
+                aboutUserVC.user = user
             }
             
         }
@@ -54,7 +39,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func pressLogInButton() {
  
-        guard userNameTextField.text == userName, passwordTextField.text == password else {
+        guard userNameTextField.text == user.login, passwordTextField.text == user.password else {
                 showAlert(
                     title: "Invalid login or password",
                     message: "Please, enter correct login and password",
@@ -69,8 +54,8 @@ class LoginViewController: UIViewController {
 
     @IBAction func forgotUserPassword(_ sender: UIButton) {
         sender.tag == 0
-            ? showAlert(title: "Ooops!", message: "Your name is \(userName) 😀")
-            : showAlert(title: "Ooops!", message: "Your password is \(password) 😀")
+            ? showAlert(title: "Ooops!", message: "Your name is \(user.login) 😀")
+            : showAlert(title: "Ooops!", message: "Your password is \(user.password) 😀")
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {
